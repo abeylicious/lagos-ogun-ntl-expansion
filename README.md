@@ -1,5 +1,5 @@
 # lagos-ogun-ntl-expansion
-10-year spatiotemporal change detection of urban settlement expansion across the Lagos-Ogun interstate corridor using VIIRS Nighttime Lights (2015–2025).
+ 10-year spatiotemporal change detection of urban settlement expansion across the Lagos-Ogun interstate corridor using VIIRS Nighttime Lights (2015–2025).
 # 🛰️ Lagos-Ogun Interstate Corridor: Decadal Settlement Expansion & Radiance Growth (2015–2025)
 
 ## 📌 Executive Summary
