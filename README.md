@@ -29,20 +29,6 @@ This project utilizes **Stray-Light Corrected VIIRS Nighttime Light (NTL) compos
 
 ---
 
----
-
-## 📈 Quantitative Time Series Analysis (2014–2025)
-
-<div align="center">
-  <img src="figures/ntl_decadal_time_series.png" width="90%" alt="Lagos-Ogun NTL Time Series">
-  <p><i>Figure 2: Total Aggregate Nighttime Light Emission (Sum Radiance) across the Lagos–Ogun Corridor (2014–2025). Data derived from monthly NOAA/VIIRS DNB composites.</i></p>
-</div>
-
-### Key Macro Trends:
-* **~130% Increase in Total Radiance:** Total sum radiance grew from a baseline range of **~60,000–80,000 nW/cm²/sr** in 2014/2015 to peaks exceeding **175,000 nW/cm²/sr** by 2025.
-* **Post-2020 Growth Acceleration:** The slope steepens noticeably from 2021 onward, reflecting rapid industrial development along the Lekki axis and intense suburban expansion along the northern border into Ogun State.
-* **Atmospheric & Seasonal Drivers:** The sharp downward dips (e.g., mid-2022) align with heavy seasonal cloud attenuation during the peak West African monsoon season, validating the necessity of using multi-month median compositing for spatial change detection.
-
 ## 🔍 Key Spatial Insights & Findings
 
 ### 1. The Northern Express Spine (Lagos–Ibadan Expressway Corridor)
@@ -59,6 +45,19 @@ This project utilizes **Stray-Light Corrected VIIRS Nighttime Light (NTL) compos
 ### 4. Coastal Data Refinement (Badagry Axis)
 * Observed radiance shifts along the far western coast (Badagry) reflect the impact of **Stray-Light Correction algorithms** in modern NOAA processing, filtering out background coastal noise and returning a truer baseline of lit human settlements.
 
+---
+
+## 📈 Quantitative Time Series Analysis (2014–2025)
+
+<div align="center">
+  <img src="figures/ntl_decadal_time_series.png" width="90%" alt="Lagos-Ogun NTL Time Series">
+  <p><i>Figure 2: Total Aggregate Nighttime Light Emission (Sum Radiance) across the Lagos–Ogun Corridor (2014–2025). Data derived from monthly NOAA/VIIRS DNB composites.</i></p>
+</div>
+
+### Key Macro Trends:
+* **~130% Increase in Total Radiance:** Total sum radiance grew from a baseline range of **~60,000–80,000 nW/cm²/sr** in 2014/2015 to peaks exceeding **175,000 nW/cm²/sr** by 2025.
+* **Post-2020 Growth Acceleration:** The slope steepens noticeably from 2021 onward, reflecting rapid industrial development along the Lekki axis and intense suburban expansion along the northern border into Ogun State.
+* **Atmospheric & Seasonal Drivers:** The sharp downward dips (e.g., mid-2022) align with heavy seasonal cloud attenuation during the peak West African monsoon season, validating the necessity of using multi-month median compositing for spatial change detection.
 ---
 
 ## 🛠️ Data & Methodology
