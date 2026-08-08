@@ -1,4 +1,3 @@
-/***** End of imports. If edited, may not auto-convert in the playground. *****/
 // Workflow:
 // Filter both states and dissolve into a single MultiPolygon Geometry right away
 var lagosOgunGeom = ee.FeatureCollection("FAO/GAUL/2015/level1")
