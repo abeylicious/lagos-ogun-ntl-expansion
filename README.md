@@ -1,31 +1,66 @@
-# Lagos-Ogun-ntl-expansion
- 10-year spatiotemporal change detection of urban settlement expansion across the Lagos-Ogun interstate corridor using VIIRS Nighttime Lights (2015–2025).
-# 🛰️ Lagos-Ogun Interstate Corridor: Decadal Settlement Expansion & Radiance Growth (2015–2025)
+# 🌌 Constrained Growth: Mapping Decadal Urban Encroachment along the Lagos–Ogun Interstate Corridor (2015–2025)
+
+![QGIS](https://img.shields.io/badge/QGIS-3.x-green?logo=qgis)
+![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-GEE-blue?logo=google)
+![Dataset](https://img.shields.io/badge/Dataset-NOAA%2FVIIRS%2FDNB-orange)
 
 ## 📌 Executive Summary
-This repository analyzes the cross-boundary urban spillover and spatial densification along the **Lagos–Ogun interstate corridor** (e.g., Berger, Mowe, Ibafo, Sagamu, and Ota axes) over a 10-year period (2015–2025). 
+Lagos is Africa’s largest megacity, but its geographic expansion is heavily constrained by the Atlantic Ocean to the south and vast lagoon/wetland systems to the east. As a result, population growth and commercial development have been forced northward, spilling directly across administrative boundaries into neighboring Ogun State.
 
-Using **VIIRS Day/Night Band (DNB)** Nighttime Light (NTL) satellite composites, this project maps how high housing demands and commercial expansion in Lagos State have catalyzed rapid settlement growth across the Ogun State border.
-
----
-
-## 🔬 Methodology & Spatial Framework
-* **Data Sources:** VIIRS Nighttime Day/Night Band (DNB) Monthly/Annual Composites via Google Earth Engine (GEE).
-* **Spatial Analytics:** Bitwise Matrix Classification in QGIS Raster Calculator isolating:
-  * 🟪 **Cross-Border Expansion:** Unlit rural land in 2015 converted to settled land by 2025.
-  * 🟨 **Core Densification:** Established urban nodes experiencing high radiance surges ($\ge +3.0 \text{ nW/cm}^2/\text{sr}$).
-  * ⬜ **Stable Baseline Footprint:** Persistent 2015 urban boundaries.
+This project utilizes **Stray-Light Corrected VIIRS Nighttime Light (NTL) composites** to track decadal urban expansion and spatial encroachment across the Lagos–Ogun interstate axis between **2015** and **2025**.
 
 ---
 
-## 📁 Expected Repository Structure
+## 🗺️ Decadal Radiance Shift (2015 vs. 2025)
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>2015 Baseline Radiance</b></td>
+      <td align="center"><b>2025 Expanded Radiance</b></td>
+    </tr>
+    <tr>
+      <td><img src="figures/lagos2015.jpg" width="100%" alt="Lagos 2015 NTL"></td>
+      <td><img src="figures/lagos2025.jpg" width="100%" alt="Lagos 2025 NTL"></td>
+    </tr>
+  </table>
+  <p><i>Figure 1: VIIRS Nighttime Light Radiance across the Lagos–Ogun Corridor (2015 vs 2025). Cyan line denotes the Lagos State administrative boundary.</i></p>
+</div>
+
+---
+
+## 🔍 Key Spatial Insights & Findings
+
+### 1. The Northern Express Spine (Lagos–Ibadan Expressway Corridor)
+* **2015:** High-intensity radiance ($>15 \text{ nW/cm}^2/\text{sr}$) effectively stopped near the **Ojodu-Berger** state border line, with faint, scattered lighting extending north.
+* **2025:** A continuous, highly saturated bright yellow corridor stretches deep past the cyan state boundary, physically linking Lagos to **Magboro, Ibafo, and Mowe** along the E1 highway toward Sagamu.
+
+### 2. The North-Western Industrial Node (Sango Ota Axis)
+* A distinct outward expansion occurs along the A5 highway towards **Ota and Ifo**. Industrial growth and residential spillover in Ogun State have fused with the northern Lagos suburbs of Ojokoro and Ikotun.
+
+### 3. The Eastward Industrial Surge (Lekki / Epe Free Trade Zone)
+* **2015:** The eastern coastal strip past Sangotedo and Ibeju was predominantly dark.
+* **2025:** A massive, high-radiance node has emerged near **Ibeju-Lekki / Lekki Lagoon**, driven by major industrial megaprojects including the Dangote Refinery, Fertilizer Complex, and Lekki Deep Sea Port.
+
+### 4. Coastal Data Refinement (Badagry Axis)
+* Observed radiance shifts along the far western coast (Badagry) reflect the impact of **Stray-Light Correction algorithms** in modern NOAA processing, filtering out background coastal noise and returning a truer baseline of lit human settlements.
+
+---
+
+## 🛠️ Data & Methodology
+
+1. **Data Acquisition:** Monthly Stray-Light Corrected VIIRS Day/Night Band (DNB) imagery (`NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG`) was processed using **Google Earth Engine (GEE)**.
+2. **Compositing:** Annual median composites were generated for **2015** and **2025** to eliminate transient light spikes and seasonal cloud cover.
+3. **Cartographic Styling:** Processed in **QGIS** using a continuous `Magma` pseudocolor ramp ($0.5 - 35.0 \text{ nW/cm}^2/\text{sr}$) overlaid with administrative boundaries and OpenStreetMap transport corridors.
+
+---
+
+## 📁 Repository Structure
+
 ```text
-lagos-ogun-ntl-expansion/
-├── README.md
 ├── scripts/
-│   ├── gee_data_extraction.js
-│   └── qgis_raster_calculator.sql
-├── maps/
-│   └── Lagos_Ogun_Decadal_Growth.png
-└── data/
-    └── README.md
+│   └── gee_data_extraction.js     # GEE script for VIIRS collection filtering & export
+├── figures/
+│   ├── lagos2015.jpg              # High-res 2015 NTL radiance map
+│   └── lagos2025.jpg              # High-res 2025 NTL radiance map
+└── README.md                      # Project documentation
