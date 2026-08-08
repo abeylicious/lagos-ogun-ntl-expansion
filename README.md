@@ -51,7 +51,7 @@ This project utilizes **Stray-Light Corrected VIIRS Nighttime Light (NTL) compos
 ## 📈 Quantitative Time Series Analysis (2014–2025)
 
 <div align="center">
-  <img src="figures/Lagos_Ogun%20Time%20series%20Chart.png" width="90%" alt="Lagos-Ogun NTL Time Series">
+  <img src="figures/ntl_decadal_time_series.png" width="90%" alt="Lagos-Ogun NTL Time Series">
   <p><i>Figure 2: Total Aggregate Nighttime Light Emission (Sum Radiance) across the Lagos–Ogun Corridor (2014–2025). Data derived from monthly NOAA/VIIRS DNB composites.</i></p>
 </div>
 
